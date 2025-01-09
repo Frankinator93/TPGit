@@ -1,0 +1,130 @@
+git clone https://github.com/Frankinator93/TPGit.git : cloner le dépôt que notre collaborateur à su créer.
+
+essaie d'un fichier test sur le dépôt collaboratif : 
+
+git add fichiers_test.txt
+git commit -m "commit test"
+git push -u origin main 
+
+création de la brache HTML sur le dépôt collaboratif : 
+
+git branch html
+git checkout html (bascule sur la branche html)
+(création d'un fichier test index.html) : touch index.html
+git add index.html
+git commit -m "test commit html"
+git push -u origin html
+
+
+
+commit html 1.0 : 
+
+nano index.html
+(après avoir charger le document index.html avec du code)
+
+git add index.html
+git commit -m "html 1.0"
+git push -u origin html
+
+
+fusionner la branche main avec la branche html
+
+git checkout main (basculé sur main)
+git merge html
+git add index.html
+git commit -m "commit html 1.0"
+git push -u origin main
+
+
+
+création d'une autre branhe html ( html1.2 ) : 
+
+git branch html1.2
+git checkout html1.2
+touch index.html
+git add index.html
+git commit -m "html1.2"
+git push -u origin html1.2
+
+
+
+commit relier le css et l'html : 
+
+(toujours sur la branche html1.2)
+nano index.html
+ajoute de : <link rel="stylesheet" href="style.css">
+git add index.html
+git commit -m "relier le css avec html"
+git push -u origin html1.2
+
+re-fusionner avec la branche main : 
+
+git checkout main
+git merge html1.2
+( j'ai appris entre temps que le merge faisait le add et le commit et qu'il ne restait plus que le push a faire)
+git push -u origin main
+
+
+
+creation branche hmtl1.3 : 
+ 
+git branch html1.3
+git checkout html1.3
+touch index.html
+nano index.html (inclusion d'une navbar, d'un footer, et de compléments d'informations)
+git add index.html
+git commit -m "html1.3 : compléments/navbar/footer"
+git push -u origin html1.3
+
+
+fusionner a nouveau avec le main : 
+
+git checkout main
+git merge html1.3
+git push -u origin main
+
+
+
+a cause problème, nous avons du récupérer les document manuellement dans les différentes branches:
+
+(toujours dans la branche main) 
+git pull origin css1.2
+(vériication des fichiers avec cat)
+git checkout main
+git merge css1.2
+
+pareil pour la branche mobile : 
+
+(tjrs dans le main)
+git pull origin mobile1.2
+(cat)
+git checkout main
+git merge mobile1.2
+
+git add index.html
+git add style.css
+git add mobile.css
+
+git commit -m "récupération pour le main"
+git push -u origin main --force 
+
+
+inversion des branches : je passe désormais sur la branche css1.4
+
+creation de la branche : git branch css1.4
+git switch css1.4
+(élaboration de la nouvelle version du css)
+nano style.css
+git add style.css
+git commit -m "commit style1.4"
+git push -u origin css1.4 --force
+
+git switch main
+git merge css1.4
+git add style.css
+git commit -m "css1.4"
+git push -u origin main --force
+
+
+nous avons donc pus faire 4 version différente, tout en améliorant le site web et en échangeant nos branches.
+
