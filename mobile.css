@@ -1,0 +1,41 @@
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+
+    h2, h3 {
+        font-size: 1.2rem;
+        margin: 15px;
+        border-bottom: 1px solid green;
+        padding-bottom: 3px;
+    }
+
+    p {
+        font-size: 0.9rem;
+        margin: 15px;
+    }
+
+    ul {
+        margin: 15px;
+        padding: 0;
+        list-style-type: disc;
+    }
+
+    li {
+        margin: 8px 0;
+        padding-left: 15px;
+        line-height: 1.6;
+    }
+
+    a {
+        font-size: 0.9rem;
+    }
+}
+
+
