@@ -1,0 +1,82 @@
+Copie du repository depuis GitHub et création de la branche mobile
+
+git clone https://github.com/Frankinator93/TPGit.git
+git checkout -b mobile
+
+
+Création et initialisation du fichier mobile.css dans la branche mobile
+
+nano mobile.css
+git add mobile.css
+git commit -m "creation fichier mobile"
+git push origin mobile
+
+
+envoie de la branche main avec le dépôt github
+
+git checkout main
+git pull origin main
+
+
+Mise à jour du fichier mobile.css avec la version v1
+
+nano mobile.css
+git add mobile.css
+git commit -m "mobile v1"
+git push origin mobile
+
+
+Merge de la branche mobile dans la branche principale main
+
+git checkout main
+git merge mobile
+git push origin main
+git pull origin main
+
+
+Création de la branche mobile1.2 et ajout de la version mobile v2
+
+git checkout -b mobile1.2
+nano mobile.css
+git add mobile.css
+git commit -m "mobile v2"
+git push origin mobile1.2
+
+
+Merge de la branche mobile1.2 dans la branche principale main et envoie au depot github
+
+git checkout main
+git merge mobile1.2
+git push origin main
+git pull origin main
+
+Merge de la branche mobile1.3 dans la branche principale main et envoie au depot github
+
+git checkout -b mobile1.3
+git add mobile.css
+git commit -m "mobile v3"
+git push origin mobile1.3
+
+
+Merge de la branche mobile dans la branche principale main
+
+git pull origin html1.3
+git merge html1.3
+git checkout -b html1.4
+nano index.html
+
+changement de role pour html v4
+git add index.html
+git commit -m "html v4"
+git push origin html1.4
+git checkout main
+git add index.html
+git commit -m "html v4"
+git push origin main
+
+
+git pull origin css1.4
+git merge css1.4
+git commit "correction d'erreur"
+git push origin main
+
