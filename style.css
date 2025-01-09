@@ -3,18 +3,18 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: white;
+    color: blue;
 }
 
 h1 {
-    color: #d32f2f;
+    color: yellow-white;
     text-align: center;
     margin: 20px 0;
 }
 
 h2 {
-    color: #1976d2;
+    color: yellow;
     margin-left: 20px;
 }
 
@@ -33,5 +33,5 @@ li {
 }
 
 li::marker {
-    color: #388e3c;
+    color: black;
 }
